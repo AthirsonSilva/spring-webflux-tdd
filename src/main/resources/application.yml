@@ -1,2 +1,25 @@
-{
-    }
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test-driven
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  show-actuator: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  api-docs:
+    enabled: true
+    path: /api-docs
